@@ -1,3 +1,3 @@
-let isAdmin =true;
-let message = isAdmin ? "Bienvenido Administrador" : "Bienvenido usuario";
+let isAdmin = false;
+let message = isAdmin ? "Condición verdadera" : "Condición falsa";
 console.log(message);
