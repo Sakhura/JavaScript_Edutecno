@@ -1,0 +1,115 @@
+/*POO en JS
+funciones ya no sera nuestro centro, sino los objetos ya que da la posibilidad de que el codigo sea 
+reutilizable, modular.  */
+
+//objeto
+let persona = {
+    nombre : 'Rafaela',
+    edad : 25,
+    colorCabello: 'castaño',
+    idioma(){
+        console.log('Español');
+    }
+}
+
+
+class Personas{
+    constructor(nombre, edad, colorCabello){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.colorCabello = colorCabello;
+    }
+}
+
+/**/
+let perro ={
+    nombrePerro : 'Bobby',
+    edadPerro : 3,
+    colorPerro: 'negro',
+    ladrar(){
+        console.log('Guau guau');
+    }
+}
+class Animal{
+    constructor(nombrePerro){
+        this.nombrePerro = nombrePerro;
+        this.edadPerro = edadPerro;
+        this.colorPerro = colorPerro; 
+    }
+}
+ //Encapsulación
+ //Encapsulación es la capacidad de ocultar la información interna de un objeto y
+ //exponer solo la información que se requiere para interactuar con el objeto.
+
+ //En JavaScript, la encapsulación se logra mediante el uso de propiedades y métodos
+ //privados.
+ class Autos{
+    constructor(marca){
+        this._marca = marca;
+    }
+
+  //  Getters obtienen valores (Acceso)
+ }
+ get marca(){
+    return this._marca;
+ }
+
+// Setters dan valor a una propiedad (Mutadores)
+ set marca(nuevaMarca){
+    this._marca = nuevaMarca;
+ }
+
+ let miAuto = new Autos('Toyota');
+ console.log(miAuto.marca);
+
+ miAuto.marca= 'Toyota';
+ console.log(miAuto.marca);
+
+ //Herencia: Hereda propiedades y metodos de una clases existente
+
+ Class Animal {
+    constructor(nombre) {
+        this.nombre = nombre; // abstracción: 
+ }
+ }
+
+ hablar(){
+    console.log(`${this.nombre} hace ruido`);
+ }
+ }
+
+ class Perro extends Animal{
+    hablar({
+        console.log(`${this.nombre} ladra`);
+    })
+ }
+
+//Polimorfismo: Es la capacidad de tomar diferentes formas, es decir, un objeto puede
+//ser tratado de diferentes maneras.
+
+class Animal {
+    hablar() {
+        console.log('Animal habla');
+    }
+}
+
+ class Perro extends Animal{
+    hablar({
+        console.log('guau- guau');
+    })
+ }
+
+ class Gato extends Animal{
+    hablar(){
+        console.log('miau- miau');
+        }
+ }
+
+ function hacerHablarAnimal(Animal){
+    Animal.hablar();
+ }
+
+//Llamando a la funcion con un objeto de tipo perro
+hacerHablarAnimal(new Perro());
+hacerHablarAnimal(new Gato());
+
