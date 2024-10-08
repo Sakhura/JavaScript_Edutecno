@@ -113,3 +113,8 @@ class Animal {
 hacerHablarAnimal(new Perro());
 hacerHablarAnimal(new Gato());
 
+**MATRICES** 
+//Matrices: Son un tipo de dato que almacena un conjunto de valores de igual tipo
+//en una sola variable.
+//Se pueden crear matrices de diferentes tipos de datos, como números, strings, objetos, etc.
+//Las matrices se pueden crear de diferentes maneras:
