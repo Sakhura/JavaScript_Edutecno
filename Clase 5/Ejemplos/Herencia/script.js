@@ -29,5 +29,5 @@ persona1.imprimir();
 document.write(persona1.nombre + persona1.edad);
 
 const empleado1 = new Empleado ('Sabina',  52, 100000);
-persona1.imprimir();
+empleado1.imprimir();
 document.write(empleado1.salario);
