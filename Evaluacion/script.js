@@ -18,13 +18,12 @@ class  Carrito{
     agregarProducto(producto, cantidad){
         this.productos.push({producto, cantidad});
     }
-
-    calculartotal(){
+    calculartotal() {
         let total = 0;
-        this.productos.forEach(producto => {
-            total += producto.precio * producto.cantidad;
-    });
-    return total;
+        this.productos.forEach((item) => {
+          total += item.producto.precio * item.cantidad;
+        });
+        return total;
     }
 
     mostrarDetalleCompra() {
@@ -33,7 +32,7 @@ class  Carrito{
             alert(
             `${index +1}. ${item.producto.nombre} x ${item.cantidad} -$${(
                 item.producto.precio * item.cantidad
-             ).toFixed(2)}`
+            ).toFixed(2)}`
             );
         });
     }
